@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://dovidka.biz.ua/wp-content/uploads/2020/06/%D1%81%D1%82%D0%B5%D0%BF-%D1%86%D1%96%D0%BA%D0%B0%D0%B2%D1%96-%D1%84%D0%B0%D0%BA%D1%82%D0%B8-.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+.pol {
+    background-color: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: black;
+}
+
+p {
+    color: gray;
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+.hero-block-sviatoslav {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    background-image: url("https://avatars.mds.yandex.net/i?id=1b400c08c774d30b3f61374bda118d5ecab2aa6c-4012866-images-thumbs&n=13");;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

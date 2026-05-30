@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій сайт</title>
+    <script src="lopi.js" defer></script>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  color: purple;
+  margin: 0;
+  padding: 20px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdRDRuQ5DQKQQM_zjWbb2yJfynpvYRMu4RctKTIqt-1g&s);
+ background-size: cover;
+  background-position: center;
+ filter: contrast(1.1) saturate(1.1);
+ background-image: image-set(
+    url("https://img.freepik.com/free-vector/blue-black-abstract-background_1340-17012.jpg?semt=ais_hybrid&w=740&q=80") 1x,
+    url("https://img.freepik.com/free-vector/blue-black-abstract-background_1340-17012.jpg?semt=ais_hybrid&w=740&q=80") 2x
+  );
+}
+
+
+h1 {
+  text-align: center;
+}
+
+form {
+  background: rgb(144, 136, 167);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdRDRuQ5DQKQQM_zjWbb2yJfynpvYRMu4RctKTIqt-1g&s);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ filter: contrast(1.1) saturate(1.1);
+}
+
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  color: purple;
+  background-color: plum;
+}
+
+form button {
+  width: 100%;
+  background: #4CAF50;
+  margin-top: 15px;
+  background-color: purple;
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-image: url(https://img.freepik.com/free-vector/blue-black-abstract-background_1340-17012.jpg?semt=ais_hybrid&w=740&q=80);
+  padding: 15px;
+  width: 220px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.price {
+  color: green;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #111;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: purple;
+}
+
+button:hover {
+  background: #333;
+}
+
+.cart {
+  color: purple;
+  margin-top: 40px;
+  background-image: url(https://img.freepik.com/free-vector/blue-black-abstract-background_1340-17012.jpg?semt=ais_hybrid&w=740&q=80);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cart h2 {
+  text-align: center;
+
+}
+
+#cart-list {
+  padding-left: 20px;
+}
+.qw {
+  text-align: center;
+  font-size: 18px;
+  color: purple;
+}
+</style>
+</head>
+<body>
+    <h1>Вітайтаю на сайті SMARTLOB</h1>
+    <p  class="qw">Перед продовженням, будь ласка, залогініться.</p>
+<form id="regForm">
+
+  <label>Логін:</label>
+  <input type="text" required><br><br>
+
+  <label>Електронна пошта:</label>
+  <input type="email" required><br><br>
+
+  <label>Пароль:</label>
+  <input type="password" required><br><br>
+
+  <label>Стать:</label>
+  <select required>
+    <option>Чоловік</option>
+    <option>Жінка</option>
+  </select><br><br>
+
+  <label>Вік:</label>
+  <input type="number" required><br><br>
+
+  <label>Країна:</label>
+  <input type="text" required><br><br>
+
+ <button type="submit">Зареєструватися</button>
+</form>
+
+<h2 id="message" class="qw"></h2>
+
+</form>
+        <h1>Смарт техніка</h1>
+
+<div class="products">
+
+  <div class="card">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR4PsSp67ryEIrHINH1EiKMH2VgLmwziz4FYL4nQ4v61vzHneETL8hnN2F6E5GJq8Bh8-UVSi_8ELktBtn1OI4QZT9gIYyv">
+    <h3>Смартфон X</h3>
+    <p class="price">12000 грн</p>
+    <button onclick="addToCart('Смартфон X', 12000)">Купити</button>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRNKtmF2VyD44Z7hZh5gt7kKnX6P3YzqXkJjvLIrcBy7qZoHBVn9g7VDxF6LOPULxjVX1GwF-d-eMtZCrJRLHlJWgTDj45TBg">
+    <h3>Смарт-годинник</h3>
+    <p class="price">5000 грн</p>
+    <button onclick="addToCart('Смарт-годинник', 5000)">Купити</button>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ7LMlmhaEZ7pLRnbDwGovKu8F0xFwEPvaEP92cCbHmNlwx48KyoluyijTmK9hYM0sQOxmBmV1UTCD42r17J--OarwyRNMQx6dNdGHO88eGOb7NvOdZeP7Hjkg">
+    <h3>Бездротові навушники</h3>
+    <p class="price">3000 грн</p>
+    <button onclick="addToCart('Навушники', 3000)">Купити</button>
+  </div>
+  <div class="card">
+  <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTu0Z5JpeXB_JFLwlFsIQC-CLWLq5SPYOOcrRY9HY7bSxYNb5BBCQ9FSoZaX2lR01vFeaaZWH9rAjjfd7xavS48UDYgoKJBpGL04dKOwgEdny40F7rTPvlnPQ">
+  <h3>Ноутбук Pro</h3>
+  <p class="price">25000 грн</p>
+  <button onclick="addToCart('Ноутбук Pro', 25000)">Купити</button>
+</div>
+
+<div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTnsUqzVPgaRY1v3QYqtQtN-jaD5mTxZ88BuKBRS1QoByNJAyPL9IkdqVO4GptqqT2r8tOaFaXTTD0X8o2xPxkbYrseZT0q">
+  <h3>Планшет Air</h3>
+  <p class="price">9000 грн</p>
+  <button onclick="addToCart('Планшет Air', 9000)">Купити</button>
+</div>
+
+<div class="card">
+  <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTkMdofhKzl_dLSxUCdDu592Mr4rfwC2myV97Gfdb5tF43nsbDA2EnEu2a9S36ds1f5nLLZjCU8G_VMImWGfCwZAZ1s_YQzjONzZuhynV5rUtpb11fq5gXKZg">
+  <h3>Bluetooth колонка</h3>
+  <p class="price">1500 грн</p>
+  <button onclick="addToCart('Колонка', 1500)">Купити</button>
+</div>
+<div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR8RZ7ZeC6bA9vElRSJpUQso90GA8BL1JZMdk95qStmC7ndIqFwUME8UzI3FUQ5JrQKuz0DtquAnp-OuQI8J331c4L9If4YgSQ12es5wtYgwtQ9zLuxsAdNKg">
+  <h3>Фотоапарат HD</h3>
+  <p class="price">8000 грн</p>
+  <button onclick="addToCart('Фотоапарат HD', 8000)">Купити</button>
+</div>
+
+<div class="card">
+  <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTTMV3JyRM5aVnCVsEpS4lgg5Sb-wkDlgBvzewRqNZZuF1rtkxYHjAhaE-3vdfXBnf8OrM60B7JQ46ezn2z5V_8Kmsr1wea1uI-6sb8SSu_eah8pacJtL8Fd3c">
+  <h3>Механічна клавіатура</h3>
+  <p class="price">2500 грн</p>
+  <button onclick="addToCart('Клавіатура', 2500)">Купити</button>
+</div>
+
+<div class="cart">
+  <h2>🛒 Кошик</h2>
+  <ul id="cart-list"></ul>
+  <p><b>Сума: <span id="total">0</span> грн</b></p>
+  <button onclick="pay()">💳 Оплатити</button>
+<div class="products">
+
+</div>
+
+<div class="cart">
+  
+</div>
+</div>
+</div>
+    </div>
+</body>
+</html>

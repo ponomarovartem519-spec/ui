@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>☢ Fallout Prototype</title>
+    <link rel="stylesheet" href="ol.css">
+</head>
+<body>
+
+<h1>☢ Fallout Prototype</h1>
+<p>Натисни кнопку, щоб почати гру</p>
+
+<button id="startBtn">Старт</button>
+
+<div id="gameArea" class="hidden">
+    <p id="status">...</p>
+
+    <div id="stats">
+        ❤️ HP: <span id="hp">100</span> |
+        ☢ Радіація: <span id="rad">0</span>
+    </div>
+
+    <div id="inventory">
+        🎒 Інвентар: <span id="items">порожньо</span>
+    </div>
+
+    <button onclick="explore()">Дослідити</button>
+    <button onclick="restart()">Перезапуск</button>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="jingle_jangle.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<script src="script.js"></script>
+</body>
+</html>

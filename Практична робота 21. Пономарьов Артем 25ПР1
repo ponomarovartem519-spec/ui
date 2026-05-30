@@ -1,0 +1,133 @@
+<DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота 21: Створення форм за допомогою HTML</title>
+    <style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+}
+.container {
+width: 50%;
+margin: 50px auto;
+padding: 20px;
+background-color: #ffffff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+h1 {
+text-align: center;
+color: #333;
+}
+label {
+display: block;
+margin-bottom: 8px;
+font-size: 16px;
+color: #555;
+}
+    input, select, textarea {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+    input[type=&quot;radio&quot;], input[type=&quot;checkbox&quot;] {
+width: auto;
+}
+    textarea {
+resize: vertical;
+height: 100px;
+}
+    .io {
+margin-bottom: 15px;
+}
+    .gender-group, .country-group {
+display: flex;
+gap: 20px;
+}
+    .io input[type=&quot;submit&quot;] {
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+font-size: 16px;
+padding: 15px;
+width: 100%;
+border-radius: 4px;
+}
+    .io input[type=&quot;submit&quot;]:hover {
+background-color: #45a049;
+}
+    .io input[type=&quot;submit&quot;]:active {
+background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+    <div class="lop">
+        <h1>Реєстрація користувача</h1>
+        <form action="/submit" method="POST">
+            <div class="io">
+                <label for="username">Ім'я користувача:</label>
+                <input type="text" id="username" name="username" placeholder="Ім'я" required>
+            </div>
+            <div class="io">
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" placeholder="Електронна пошта" required>
+            </div>
+           <div class="io">
+<label for="password">Пароль:</label>
+<input type= id="password" name="password" placeholder="Введіть пароль" required>
+           </div?>
+  <div class="io">
+    <label>Стать:</label>
+
+    <div>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Чоловік</label>
+    </div>
+
+    <div>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Жінка</label>
+    </div>
+    <div>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Не хочу вказувати</label>
+    </div>
+  </div>
+
+  <div class="io country-group">
+    <label for="country">Країна:</label>
+    <select id="country" name="country" required>
+      <option value="ua">Україна</option>
+      <option value="us">США</option>
+      <option value="ca">Канада</option>
+        <option value="gb">Велика Британія</option>
+    </select>
+  </div>
+
+  <div class="io">
+    <label for="age">Вік:</label>
+    <input type="number" id="age" name="age" placeholder="Введіть свій вік">
+  </div>
+
+  <div class="io">
+    <label for="message">Повідомлення:</label>
+    <textarea id="message" name="message" placeholder="Ваше повідомлення"></textarea>
+  </div>
+
+  <div class="io">
+    <input type="submit" value="Зареєструватися">
+  </div>
+</form>
+        </div>
+        </form>
+        </body>
+</html>
